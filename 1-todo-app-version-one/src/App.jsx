@@ -4,23 +4,31 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 import AppName from './components/AppName'
 import AddTodo from './components/AddTodo'
-import TodoItem1 from './components/TodoItem1'
-import TodoItem2 from './components/Todoitem2'
+import TodoItems from './components/TodoItems'
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const todoItems = [{
+    name: "Buy Mike",
+    dueDate: "4/10/2023",
+  },
+  {
+    name: "Go to College",
+    dueDate: "4/10/2023",
+  },
+  {
+    name: "Like this vidoe",
+    dueDate: "4/10/2023",
+  }
+];
 
   return (
     <>
       <center className='todo-container'>
         <AppName></AppName>
-        <div className='items-container'>
-          <AddTodo></AddTodo>
-
-          <TodoItem1></TodoItem1>
-          <TodoItem2></TodoItem2>
-        </div>
+        <AddTodo></AddTodo>
+        <TodoItems todoItems={todoItems}></TodoItems>
+        
 
         
       </center>
