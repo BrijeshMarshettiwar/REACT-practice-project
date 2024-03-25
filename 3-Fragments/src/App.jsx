@@ -4,6 +4,7 @@ import ErrorMessage from './components/ErrorMessage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import Container from './components/Container';
+import FoodInput from './components/FoodInput';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
         {/* {foodItem.length === 0 && <h3>I am still hungry</h3> } */}
           <ErrorMessage items={foodItem}></ErrorMessage>
-
+          <FoodInput></FoodInput>
           <FoodItems items={foodItem}></FoodItems>
       </Container>
       {/* <Container>
