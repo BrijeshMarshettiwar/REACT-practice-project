@@ -1,17 +1,18 @@
 import styles from "./Item.module.css";
 
-const Item = ({ foodItem }) =>{
+const Item = ({ foodItem , handleBuyButton }) =>{
 
-  const handleBuyButtonClick = (event) =>{
-    console.log(event);
-    console.log(`${foodItem} being bought`);
-  }
+  // const handleBuyButtonClick = (event) =>{
+  //   console.log(event);
+  //   console.log(`${foodItem} being bought`);
+  // }
 
   return (
     <li className={`${styles["Kg-item"]} list-group-item`}>
       <span className={styles["Kg-span"]}>{foodItem}</span>
       <button className={`${styles.button} btn btn-info`}
-      onClick={(event) => handleBuyButtonClick(event)}
+      // onClick={(event) => handleBuyButtonClick(event)}
+      onClick={handleBuyButton}
       >Buy</button>
     </li>
   )
